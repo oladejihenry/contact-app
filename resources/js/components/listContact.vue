@@ -22,3 +22,8 @@ export default {
     props: ['contact']
 }
 </script>
+<style scoped>
+.contact{
+    width: 100%;
+}
+</style>

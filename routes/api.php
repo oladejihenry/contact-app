@@ -19,6 +19,7 @@ Route::get('contact',[ContactController::class, 'index']);
 Route::prefix('/contact')->group(function(){
         Route::post('/store', [ContactController::class, 'store']);
         Route::put('/{id }', [ContactController::class, 'update']);
+        Route::get('/search', [ContactController::class, 'search']);
     }
 );
 

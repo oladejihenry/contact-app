@@ -1,7 +1,8 @@
 <template>
     <div class="contactListContainer">
+        <add-search />
         <div class="heading">
-            <h2 id="title">Contact List</h2>
+            <h2 id="title">Create New Contact</h2>
             <add-contact-form />
         </div>
         <list-view :contact="contact" />
@@ -11,10 +12,12 @@
 <script>
 import addContactForm from "./addContactForm.vue";
 import listView from "./listView.vue";
+import addSearch from "./addSearch.vue";
 export default {
     components: {
         addContactForm,
-        listView
+        listView,
+        addSearch
     },
     data: function() {
         return{

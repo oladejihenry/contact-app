@@ -1,5 +1,6 @@
 <template>
     <div>
+        <h2 id="title">Contact List</h2>
         <div v-for="(contact, index) in contact" :key="index">
             <list-contact
                 :contact="contact"
@@ -24,5 +25,8 @@ export default {
     background: #e6e6e6;
     padding:5px;
     margin-top: 5px;
+}
+#title {
+    text-align: center;
 }
 </style>

@@ -22,4 +22,11 @@ class ContactController extends Controller
 
         return response()->json(['message' => 'Contact Added Successfully']);
     }
+
+    //Search for contacts
+    public function search(Request $request)
+    {
+        $contacts = Contact::where('first_name',$request->keywords)->orWhere('email', $request->keywords)->get();
+        return response()->json($contacts);
+    }
 }
